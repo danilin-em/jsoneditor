@@ -1,23 +1,20 @@
 import 'jsoneditor/src/scss/jsoneditor.scss';
 import JSONEditor from 'jsoneditor';
 
-const options = {
-    modes: ['code', 'form', 'text', 'tree', 'view', 'preview'],
-};
 
-const editor1 = new JSONEditor(document.getElementById('editor1'), {
-    ...options,
+const editor = new JSONEditor(document.getElementById('editor'), {
     mode: 'code',
+    modes: ['code', 'preview'],
     onChangeText: function (jsonString) {
-        editor2.updateText(jsonString);
+        inspector.updateText(jsonString);
     }
 });
 
-const editor2 = new JSONEditor(document.getElementById('editor2'), {
-    ...options,
+const inspector = new JSONEditor(document.getElementById('inspector'), {
     mode: 'tree',
+    modes: ['tree', 'form', 'view'],
     onChangeText: function (jsonString) {
-        editor1.updateText(jsonString);
+        editor.updateText(JSON.stringify(JSON.parse(jsonString), null, 2));
     }
 });
 
@@ -30,5 +27,5 @@ const sample = {
     'string': 'Hello World'
 };
 
-editor1.set(sample);
-editor2.set(sample);
+editor.set(sample);
+inspector.set(sample);
