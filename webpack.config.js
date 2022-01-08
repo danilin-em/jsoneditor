@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'development',
     entry: './src-tauri/src/app.js',
     module: {
         rules: [
