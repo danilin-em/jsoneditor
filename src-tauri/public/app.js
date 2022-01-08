@@ -4,7 +4,7 @@ const options = {
 
 const editor1 = new JSONEditor(document.getElementById('editor1'), {
     ...options,
-    mode: 'text',
+    mode: 'code',
     onChangeText: function (jsonString) {
         editor2.updateText(jsonString);
     }
