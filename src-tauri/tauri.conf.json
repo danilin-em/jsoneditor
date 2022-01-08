@@ -7,7 +7,8 @@
     "distDir": "./public",
     "devPath": "./public",
     "beforeDevCommand": "yarn build",
-    "beforeBuildCommand": "yarn build"
+    "beforeBuildCommand": "yarn build",
+    "withGlobalTauri": true
   },
   "tauri": {
     "bundle": {
@@ -49,13 +50,24 @@
       "active": false
     },
     "allowlist": {
-      "all": true
+      "all": false,
+      "shell": {
+        "open": true
+      },
+      "fs": {
+        "readTextFile": true,
+        "writeFile": true
+      },
+      "dialog": {
+        "open": true,
+        "save": true
+      }
     },
     "windows": [
       {
         "title": "JSON Editor",
-        "width": 800,
-        "height": 600,
+        "width": 900,
+        "height": 800,
         "resizable": true,
         "fullscreen": false
       }
