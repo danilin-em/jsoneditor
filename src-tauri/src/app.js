@@ -1,3 +1,6 @@
+import 'jsoneditor/src/scss/jsoneditor.scss';
+import JSONEditor from 'jsoneditor';
+
 const options = {
     modes: ['code', 'form', 'text', 'tree', 'view', 'preview'],
 };
