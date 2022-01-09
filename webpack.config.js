@@ -15,4 +15,11 @@ module.exports = {
         path: path.join(__dirname, 'src-tauri/public/dist'),
         clean: true,
     },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'src-tauri/public'),
+        },
+        compress: true,
+        port: 9000,
+    },
 };

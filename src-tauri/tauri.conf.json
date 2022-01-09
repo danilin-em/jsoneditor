@@ -5,8 +5,8 @@
   },
   "build": {
     "distDir": "./public",
-    "devPath": "./public",
-    "beforeDevCommand": "yarn build",
+    "devPath": "http://localhost:9000/",
+    "beforeDevCommand": "yarn serve",
     "beforeBuildCommand": "yarn build",
     "withGlobalTauri": true
   },
@@ -51,9 +51,6 @@
     },
     "allowlist": {
       "all": false,
-      "shell": {
-        "open": true
-      },
       "fs": {
         "readTextFile": true,
         "writeFile": true
