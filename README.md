@@ -1,5 +1,8 @@
 # jsoneditor
 
+[JSON Editor](https://github.com/josdejong/jsoneditor) desktop application
+
+Builded on [Tauri](https://tauri.studio/en/) and [jsoneditor](https://github.com/josdejong/jsoneditor)
 ## Development Environment
 
 ```sh
