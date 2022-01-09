@@ -3,6 +3,8 @@
 [JSON Editor](https://github.com/josdejong/jsoneditor) desktop application
 
 Builded on [Tauri](https://tauri.studio/en/) and [jsoneditor](https://github.com/josdejong/jsoneditor)
+
+![Preview](doc/preview.png)
 ## Development Environment
 
 ```sh
