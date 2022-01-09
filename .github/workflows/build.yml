@@ -8,13 +8,8 @@ on: push
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        include:
-          - os: macos-11
-          - os: ubuntu-20.04
-          - os: windows-2019
+    name: Create Release
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - run: echo ${{matrix.TARGET}}
